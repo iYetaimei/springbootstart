@@ -1,0 +1,27 @@
+server:
+  port: 8081          #端口
+  servlet:
+    context-path: /springb  #访问路径
+    session:
+      cookie:
+        max-age: 100        #cookie 失效时间，单位为秒
+      timeout: 100          #session失效时间，单位为秒
+  tomcat:
+    url-encoding: UTF-8     #请求编码格式
+spring:
+#  thymeleaf:
+#    prefix: classpath:/templates/ #模板路劲
+#    suffix: .html     #模板后缀
+#    servlet:
+#      content-type: text/html   #content-type
+#    encoding: UTF-8       #编码格式
+#    mode: HTML5             #校验H5格式
+#    cache: false            #关闭缓存
+  devtools:
+    restart:
+      enabled: true  #设置开启热部署
+  datasource:
+    url: jdbc:mysql://192.168.198.128:3306/mybatisdb?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
